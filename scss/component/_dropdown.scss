@@ -6,7 +6,7 @@
 
     padding-top: 54px;
     width: min(1240px, 100%);
-    // visibility: hidden;
+    display: none;
 
     &__inner {
         --inner-padding: 30px;
@@ -95,11 +95,12 @@
     }
 
     &__item {
-        &:hover .sub-menu {
+        &--active .sub-menu {
             display: grid;
         }
     }
 
+    &__item--active > &__link,
     &__item:hover > &__link {
         color: #0071dc;
         font-weight: 500;
@@ -117,7 +118,7 @@
     position: absolute;
     inset: 0 0 0 var(--main-column-width);
 
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--inner-padding);
 
