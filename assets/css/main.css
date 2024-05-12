@@ -177,6 +177,10 @@ select {
   -webkit-tap-highlight-color: transparent;
 }
 
+input {
+  background: transparent;
+}
+
 .icon {
   filter: var(--icon-color);
 }
@@ -1334,6 +1338,10 @@ html.dark {
   --filter-btn-bg: #171c28;
   --product-card-bg: #171c28;
   --product-card-shadow: rgba(0, 0, 0, 0.2);
+  --filter-form-bg: var(--dropdown-bg-color);
+  --filter-form-shadow: rgba(0, 0, 0, 0.4);
+  --filter-form-tag-bg: #171c28;
+  --filter-form-arrow: var(--dropdown-arrow-color);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2007,6 +2015,7 @@ html {
   font-weight: 400;
 }
 .btn--primary {
+  color: #1a162e;
   background: #ffb700;
 }
 .btn--outline {
@@ -2083,14 +2092,34 @@ html {
   padding: 20px;
   background: var(--filter-form-bg);
   filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
+  transition: opacity, visibility;
+  transition-duration: 0.3s;
+}
+@media (max-width: 1199.98px) {
+  .filter {
+    padding-bottom: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    height: calc(100vh - 80px);
+  }
+}
+@media (max-width: 575.98px) {
+  .filter {
+    width: 85vw;
+  }
+}
+.filter.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 .filter__arrow {
   position: absolute;
   top: -17px;
   right: 27px;
   height: 20.5px;
+  filter: var(--filter-form-arrow);
 }
-.filter__heading, .filter__form-label {
+.filter__heading {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
@@ -2099,6 +2128,7 @@ html {
   margin-top: 30px;
 }
 .filter__form-label {
+  display: block;
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
@@ -2154,6 +2184,11 @@ html {
   width: 121px;
   height: 36px;
   padding: 0 12px;
+}
+@media (max-width: 575.98px) {
+  .filter__form-text-input {
+    width: 100%;
+  }
 }
 .filter__form-text-input--small .filter__form-input {
   font-size: 1.4rem;
@@ -2217,20 +2252,45 @@ html {
   margin: 0 30px;
   background: #eee;
 }
+@media (max-width: 1199.98px) {
+  .filter__separate {
+    height: 1px;
+    width: 100%;
+    margin: 30px 0;
+  }
+}
 .filter__footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 32px;
 }
+@media (max-width: 1199.98px) {
+  .filter__footer {
+    position: sticky;
+    bottom: 0;
+    padding-bottom: 16px;
+    background: var(--filter-form-bg);
+  }
+}
 .filter__cancel, .filter__submit {
   height: 38px;
   padding: 0 10px;
+}
+@media (max-width: 575.98px) {
+  .filter__cancel, .filter__submit {
+    flex: 1;
+  }
 }
 .filter__cancel {
   font-size: 1.5rem;
 }
 .filter__submit {
   font-size: 1.4rem;
+}
+@media (max-width: 1199.98px) {
+  .filter__content {
+    flex-direction: column;
+  }
 }
 
 .home__container {
