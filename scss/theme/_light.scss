@@ -80,4 +80,7 @@ html {
     @include abstracts.screen(md) {
         --breadcrumbs-bg: #fff;
     }
+
+    // Review
+    --review-card-bg: #fafafd;
 }
