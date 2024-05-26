@@ -1381,6 +1381,8 @@ html.dark {
   --search-bar-bg: #171c28;
   --breadcrumbs-bg: #171c28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+  --review-card-bg: #171c28;
+  --text-content-hr-bg: #3e4043;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1462,6 +1464,11 @@ html {
 @media (max-width: 767.98px) {
   html {
     --breadcrumbs-bg: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --review-card-bg: #fff;
   }
 }
 
@@ -3366,16 +3373,15 @@ html {
 .prod-tab__content--current {
   display: block;
 }
-
-.prod-content__heading {
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 141.667%;
-  margin-bottom: 30px;
-}
-
 .prod-tab__text-content {
   margin-top: -20px;
+}
+
+.prod-content__heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 141.667%;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

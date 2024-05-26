@@ -81,4 +81,10 @@ html.dark {
     @include abstracts.screen(md) {
         --breadcrumbs-bg: #171c28;
     }
+
+    // Review
+    --review-card-bg: #171c28;
+
+    // Text content
+    --text-content-hr-bg: #3e4043;
 }
