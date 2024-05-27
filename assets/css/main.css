@@ -1777,6 +1777,11 @@ html {
   font-size: 1.8rem;
   line-height: 145.455%;
 }
+.act-dropdown__separate {
+  margin: 20px 0;
+  height: 1px;
+  background: var(--header-act-dropdown-border-color);
+}
 .act-dropdown__bottom {
   margin: 20px 0;
   padding: 20px 0;
