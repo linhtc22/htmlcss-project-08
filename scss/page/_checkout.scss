@@ -24,6 +24,7 @@
     border-radius: 20px;
     background: var(--checkout-cart-info-bg);
     box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
+    color: var(--cart-info-text-color);
 
     @include abstracts.screen(md) {
         padding: 16px;
